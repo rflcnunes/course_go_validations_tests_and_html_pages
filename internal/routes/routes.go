@@ -9,5 +9,6 @@ func Setup() {
 	r := gin.Default()
 	r.GET("/students", controllers.DisplayAllStudents)
 	r.GET("/greeting/:name", controllers.Greeting)
+	r.POST("/students", controllers.CreateNewStudent)
 	r.Run()
 }
