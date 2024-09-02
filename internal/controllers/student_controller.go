@@ -11,3 +11,10 @@ func DisplayAllStudents(c *gin.Context) {
 	config.DB.Find(&students)
 	c.JSON(200, students)
 }
+
+func Greeting(c *gin.Context) {
+	name := c.Params.ByName("name")
+	c.JSON(200, gin.H{
+		"API says:": "Hey " + name + ", how are you doing?",
+	})
+}

@@ -2,3 +2,5 @@
 GET http://localhost:8080/students HTTP/1.1
 Accept: application/json
 
+### Greating
+GET http://localhost:8080/greeting/rafael HTTP/1.1
