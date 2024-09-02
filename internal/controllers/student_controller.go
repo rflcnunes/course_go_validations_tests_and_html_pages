@@ -45,3 +45,10 @@ func GetStudentByID(c *gin.Context) {
 
 	c.JSON(http.StatusOK, student)
 }
+
+func DeleteStudent(c *gin.Context) {
+	var student models.Student
+	id := c.Params.ByName("id")
+	config.DB.Delete(&student, id)
+	c.JSON(http.StatusOK, gin.H{"data": "Student deleted successfully"})
+}

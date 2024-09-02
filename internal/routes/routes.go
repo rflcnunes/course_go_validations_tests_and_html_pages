@@ -11,5 +11,6 @@ func Setup() {
 	r.GET("/greeting/:name", controllers.Greeting)
 	r.POST("/students", controllers.CreateNewStudent)
 	r.GET("/students/:id", controllers.GetStudentByID)
+	r.DELETE("/students/:id", controllers.DeleteStudent)
 	r.Run()
 }
