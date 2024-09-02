@@ -14,3 +14,6 @@ Content-Type: application/json
   "cpf": "12345678900",
   "rg": "AB123456"
 }
+
+### Get a student by id
+GET http://localhost:8080/students/2 HTTP/1.1

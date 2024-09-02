@@ -10,5 +10,6 @@ func Setup() {
 	r.GET("/students", controllers.DisplayAllStudents)
 	r.GET("/greeting/:name", controllers.Greeting)
 	r.POST("/students", controllers.CreateNewStudent)
+	r.GET("/students/:id", controllers.GetStudentByID)
 	r.Run()
 }
