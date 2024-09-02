@@ -15,5 +15,6 @@ func Setup() {
 	r.GET(PATH+"/:id", controllers.GetStudentByID)
 	r.DELETE(PATH+"/:id", controllers.DeleteStudent)
 	r.PUT(PATH+"/:id", controllers.EditStudent)
+	r.GET(PATH+"/cpf/:cpf", controllers.GetStudentByCPF)
 	r.Run()
 }

@@ -11,7 +11,7 @@ Content-Type: application/json
 
 {
   "name": "John Doe",
-  "cpf": "12345678900",
+  "cpf": "12345678901",
   "rg": "AB123456"
 }
 
@@ -30,3 +30,6 @@ Content-Type: application/json
   "cpf": "12345678900",
   "rg": "AB123456"
 }
+
+### Get by CPF
+GET http://localhost:8080/students/cpf/12345678900 HTTP/1.1
