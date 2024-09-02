@@ -5,12 +5,15 @@ import (
 	"github.com/rflcnunes/course_validations_tests_and_html_pages/internal/controllers"
 )
 
+var PATH = "/students"
+
 func Setup() {
 	r := gin.Default()
-	r.GET("/students", controllers.DisplayAllStudents)
+	r.GET(PATH, controllers.DisplayAllStudents)
 	r.GET("/greeting/:name", controllers.Greeting)
-	r.POST("/students", controllers.CreateNewStudent)
-	r.GET("/students/:id", controllers.GetStudentByID)
-	r.DELETE("/students/:id", controllers.DeleteStudent)
+	r.POST(PATH, controllers.CreateNewStudent)
+	r.GET(PATH+"/:id", controllers.GetStudentByID)
+	r.DELETE(PATH+"/:id", controllers.DeleteStudent)
+	r.PUT(PATH+"/:id", controllers.EditStudent)
 	r.Run()
 }
